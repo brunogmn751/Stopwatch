@@ -1,0 +1,104 @@
+:root{
+    --white: #fbf5ef ;
+    --background: #f2d3ab    ;
+    --secondary: #e6c45b;
+    --box-background: #8b6d9c   ;
+    --darker-color: #272744;
+    --timer-background: #494d7e  ;
+    --black:#2D2D2A;
+    --pixel: "Tiny5", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background-color: var(--background);
+}
+button{
+    cursor: pointer;
+    padding: 1rem;
+    border:none;
+    border-radius: 1rem;
+    & svg{
+        width:4rem;
+        max-width:4rem;
+        color: var(--white);
+    }
+}
+
+.stopwatch-box{
+    background-color: var(--box-background);
+    border-radius: 15px;
+    border: solid 9px var(--darker-color);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    gap:2rem;
+    min-width: min-content;
+    max-width: 90%;
+}
+
+
+.timer-wrapper{
+    background-color: var(--timer-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:0rem 2rem;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 100%;
+}
+
+#sw-counter{
+    padding-left: 1.25rem;
+    color:white;
+    font-family: var(--pixel);
+    font-size: 700%;
+}
+
+.btn-container{
+    display: flex;
+    gap: 2rem
+}
+
+#start-btn{
+    background-color: #41cc00b5;
+}
+
+#stop-btn{
+    background-color:#a50104a7;
+}
+
+#reset-btn{
+    background-color:#ffd166b9;
+}
+
+@media screen and (max-width:480px){
+    html{
+        font-size: 50%;
+    }
+    
+    .stopwatch-box{
+        padding: 2rem 0;
+    }
+
+    #sw-counter{
+        font-size: 15vw;
+    }
+}
